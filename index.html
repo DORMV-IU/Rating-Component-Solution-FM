@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating Box</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="review-box">
+        <div class="ratings-selection">
+          <!-- RATING HEADER -->
+          <div class="star-cont">
+            <img src="./images/icon-star.svg" alt="Review Graphic" />
+          </div>
+
+          <p class="heading">How did we do?</p>
+
+          <!-- CONTENT -->
+          <p class="content">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <!-- RATING CONTAINER -->
+          <div class="rating-container">
+            <div class="rating-number inactive-state" id="one">
+              <p class="rating-content">1</p>
+              <input
+                type="radio"
+                name="ratings"
+                class="rating-radio"
+                value="1"
+              />
+            </div>
+
+            <div class="rating-number inactive-state" id="two">
+              <p class="rating-content">2</p>
+              <input
+                type="radio"
+                name="ratings"
+                class="rating-radio"
+                value="2"
+              />
+            </div>
+
+            <div class="rating-number inactive-state" id="three">
+              <p class="rating-content">3</p>
+              <input
+                type="radio"
+                name="ratings"
+                class="rating-radio"
+                value="3"
+              />
+            </div>
+
+            <div class="rating-number inactive-state" id="four">
+              <p class="rating-content">4</p>
+              <input
+                type="radio"
+                name="ratings"
+                class="rating-radio"
+                value="4"
+              />
+            </div>
+
+            <div class="rating-number inactive-state" id="five">
+              <p class="rating-content">5</p>
+              <input
+                type="radio"
+                name="ratings"
+                class="rating-radio"
+                value="5"
+              />
+            </div>
+          </div>
+
+          <button class="submit" type="submit">SUBMIT</button>
+        </div>
+
+        <!-- THANKYOU SECTION -->
+        <div class="thank-you">
+          <img src="./images/illustration-thank-you.svg" alt="thanks" />
+          <p class="rating-pick">
+            You selected <span class="selected-rating-number"></span> out of 5
+          </p>
+          <h2>Thank You!</h2>
+          <p class="thanks-message">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

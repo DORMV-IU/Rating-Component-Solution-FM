@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+//MAIN STYLES
+:root {
+  --white: #ffffff;
+  --lightGrey: #959eac;
+  --mediumGrey: rgba(125, 136, 153, 0.15);
+  --darkBlue: #252d37;
+  --veryDarkBlue: #121417;
+  --Orange: #fb7413;
+  --lighterOrange: #fc8936;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--veryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+
+  .ratings-selection {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .review-box {
+    transition: 0.3s ease-out;
+    color: var(--white);
+    font-family: "Overpass", sans-serif;
+    padding: 25px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: var(--darkBlue);
+    //linear-gradient(180deg, var(--darkBlue), var(--veryDarkBlue));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
+      0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02),
+      0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+
+    .star-cont {
+      // padding: 10px;
+      margin-bottom: 20px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--mediumGrey);
+      border-radius: 50%;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02),
+        0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+
+      img {
+        width: 15px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
+          0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02),
+          0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+      }
+    }
+
+    .heading {
+      font-weight: 700;
+      margin-bottom: 24px;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .content {
+      font-weight: 400;
+      margin-bottom: 25px;
+      color: var(--lightGrey);
+      font-size: 12.5px;
+      letter-spacing: 0.5px;
+    }
+
+    .submit {
+      width: 100%;
+      border-radius: 40px;
+      border: 0;
+      outline: 0;
+      padding: 14px 20px;
+      background: var(--Orange);
+      color: var(--white);
+      transition: 0.3s ease-out;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--Orange);
+      }
+    }
+
+    .rating-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: var(--lightGrey);
+
+      // padding: 0px 50px;
+
+      .rating-number {
+        margin-bottom: 25px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.02);
+        cursor: pointer;
+
+        p {
+          font-size: 12px;
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      .inactive-state {
+        background-color: var(--mediumGrey);
+        transition: 0.3s ease-out;
+
+        &:hover {
+          background-color: var(--lightGrey);
+          color: var(--white);
+        }
+      }
+      .active-state {
+        background-color: var(--Orange);
+        color: var(--white);
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+
+  .thank-you {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Overpass", sans-serif;
+    display: none;
+
+    img {
+      margin-bottom: 25px;
+      margin-top: 15px;
+    }
+
+    .rating-pick {
+      color: var(--lighterOrange);
+      padding: 15px;
+      background-color: var(--mediumGrey);
+      border-radius: 50px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      font-weight: 400;
+      line-height: 0%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .thanks-message {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: var(--lightGrey);
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 759px) {
+  .review-box {
+    width: 320px !important;
+  }
+}
